@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .aa
+        {
+            height: 500px;
+            width: 500px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="aa">
+    <div id="mouseCoord" style="position: absolute; top:0;left:0">
+        <span id='mouseX'><span>
+        <span id='mouseY'><span>
+     </div>
+    </div>
+
+</body>
+
+
+<script>
+    const mouseDiv = document.getElementById('mouseCoord')
+const mouseX = document.getElementById('mouseX')
+const mouseY = document.getElementById('mouseY')
+mouseDiv.addEventListener('mousemove', e => {
+  mouseDiv.setAttribute('style', `left: ${e.offsetX};top: ${e.offsetY}`)
+  mouseY.innerText = `y: ${e.offsetY}`
+  mouseY.innerText = `x: ${e.offsetX}`
+})
+</script>
+</html>
